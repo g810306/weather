@@ -28,8 +28,8 @@ $(function(){
 
             // 迴圈取得溫度及判斷圖片並組合成html
             for(let i = 1; i < 10; i += 2){
-                let tempture = res.records.locations[0].location[0].weatherElement[0].time[0].elementValue[0].value;
-                if(tempture > 19){
+                let tempture = res.records.locations[0].location[0].weatherElement[0].time[i].elementValue[0].value;
+                if(tempture >= 18){
                     img = "https://i.imgur.com/Shrg84B.png";
                 }else{
                     img = "https://i.imgur.com/BeWfUuG.png";
